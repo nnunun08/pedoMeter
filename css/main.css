@@ -1,0 +1,369 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+:root {
+  --newBlue: #258AFF;
+  --newGrey: #EAEEF1;
+  --lightGrey2: #E9EBED;
+  --newGrey3: #9296A4;
+  --red: #FF0808;
+  --green: #1ABC17;
+  --pink: #FF7272;
+}
+
+* {
+  background-repeat: no-repeat !important;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  background: #F6F7F8;
+}
+
+h1 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.serviceWrap {
+  width: 100vw;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #E9EBED;
+}
+.serviceWrap:has(.topNav) {
+  padding-top: 60px;
+}
+
+.topNav {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.topNav .arr {
+  width: 24px;
+  height: 24px;
+  background: url(../img/topNavArr.svg) center no-repeat;
+}
+.topNav .tit {
+  font-size: 18px;
+  font-weight: bold;
+}
+.topNav .rightBtn {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.topNav .setting {
+  width: 24px;
+  height: 24px;
+  background: url(../img/topNavSetting.svg) center no-repeat;
+}
+.topNav .modeToggle {
+  width: 24px;
+  height: 24px;
+  background: url(../img/topNavModeOff.svg) center no-repeat;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9296A4;
+  position: relative;
+}
+.topNav .modeToggle::before {
+  content: "OFF";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.topNav .modeToggle.on {
+  background-image: url(../img/topNavModeOn.svg);
+}
+.topNav .modeToggle.on::before {
+  content: "ON";
+  color: #258AFF;
+}
+
+.mainTop {
+  padding: 20px 18px 37px;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.mainTop .topText {
+  text-align: left;
+}
+.mainTop .topText .subTit {
+  color: var(--newGrey3);
+  font-weight: 500;
+}
+.mainTop .topText .tit {
+  font-size: 28px;
+  font-weight: bold;
+}
+.mainTop .progress {
+  margin-top: 52px;
+  width: 100%;
+  height: 14px;
+  border-radius: 10px;
+  background-color: var(--lightGrey2);
+}
+.mainTop .progress .bar {
+  background: linear-gradient(270deg, #258AFF 0%, rgba(37, 138, 255, 0.2) 100%);
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+.mainTop .progress .badge {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  transform: translateX(50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  filter: drop-shadow(-10px 8px 11px rgba(0, 0, 0, 0.15));
+  background: url(../img/ic_progressBadgeOff.png) center/cover;
+}
+.mainTop .progress .badge.on {
+  background: url(../img/ic_progressBadgeOn.png) center/cover;
+}
+.mainTop .progress .badge::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 2px);
+  transform: translateX(-50%);
+  width: 8px;
+  height: 5.5px;
+  border: 5.5px solid transparent;
+  border-top: 5.5px solid #000;
+  border-bottom: 0;
+  box-sizing: border-box;
+}
+.mainTop .mesg {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--newGrey);
+  border-radius: 100px;
+  color: #333;
+  margin: 0 auto;
+  margin-top: 22px;
+  text-align: left;
+  position: relative;
+}
+.mainTop .mesg::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: var(--newGrey);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: calc(100% - 4px);
+  transform: rotate(45deg);
+}
+.mainTop .couponWrap {
+  margin-top: 37px;
+  display: flex;
+}
+.mainTop .couponWrap > div {
+  flex: 1 0 0;
+}
+.mainTop .couponWrap > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.mainTop .couponWrap .coupon {
+  font-weight: 500;
+  color: #fff;
+  background: url(../img/img_coupon.svg) left/contain;
+  width: 146px;
+  height: 94px;
+  text-align: left;
+  padding: 22px 13px 0;
+}
+.mainTop .couponWrap .coupon .label {
+  margin-bottom: 15px;
+}
+.mainTop .couponWrap .coupon .value {
+  font-size: 20px;
+}
+.mainTop .couponWrap .point {
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+.mainTop .couponWrap .point .label {
+  font-weight: 500;
+  color: var(--newGrey3);
+  margin-bottom: 6px;
+}
+.mainTop .couponWrap .point .icon {
+  width: 33px;
+  height: 33px;
+  background: url(../img/ic_point.svg) center;
+  display: inline-block;
+  float: left;
+}
+.mainTop .couponWrap .point .value {
+  font-size: 22px;
+  font-weight: bold;
+  float: left;
+  margin-top: 10px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+.mainTop .logoutCon {
+  padding: 62px 18px 70px;
+}
+.mainTop .emoj {
+  font-size: 38px;
+  margin-bottom: 16px;
+}
+.mainTop .guideTxt {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mainBottom {
+  padding: 32px 15px 70px;
+  background-color: #fff;
+}
+.mainBottom h3 {
+  margin-bottom: 20px;
+}
+.mainBottom .missionCoupon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 70px;
+}
+.mainBottom .missionCoupon + .missionCoupon {
+  margin-top: 4px;
+}
+.mainBottom .missionIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.mainBottom .missionIcon.walk {
+  background: url(../img/ic_missionWalk.svg);
+}
+.mainBottom .missionIcon.share {
+  background: url(../img/ic_missionShare.svg);
+}
+.mainBottom .label {
+  font-size: 18px;
+  font-weight: bold;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.mainBottom .sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--newGrey3);
+}
+.mainBottom .btn {
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--newBlue);
+  width: 72px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.mainBottom .btn.black {
+  background-color: #222528;
+}
+.mainBottom .btn.disabled {
+  opacity: 0.4;
+}
+.mainBottom .moneyPoint {
+  padding: 24px;
+  border-radius: 8px;
+  background: url(../img/banner/img_moneyPoint01.jpg) center/cover no-repeat;
+  position: relative;
+  height: 150px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.mainBottom .moneyPoint .badge {
+  color: #fff;
+  background: var(--pink);
+  display: inline-block;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+.mainBottom .moneyPoint .tit {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+.mainBottom .moneyPoint .subTit {
+  color: #AB9A8B;
+  font-size: 13px;
+}
+.mainBottom .moneyPoint .point {
+  position: absolute;
+  right: 16px;
+  top: 45px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid #86BEFF;
+  background: var(--newBlue);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aroundMap {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: #000 url(../img/ic_aroundMap.svg) center;
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+}/*# sourceMappingURL=main.css.map */

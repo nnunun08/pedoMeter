@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌레터생활건강</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+
+    <!-- <div data-include-path="./component/frame_topNav.html"></div> -->
+
+    <div class="serviceWrap">
+        <div class="topNav">
+            <a href="javascript:window.history.back();">
+                <div class="arr"></div>
+            </a>
+            <div class="tit">헬스케어 만보기</div>
+            <div class="rightBtn">
+                <button>
+                    <!-- modeToggle 클릭시 .on 토글 -->
+                    <div class="modeToggle"></div>
+                    <!-- <div class="modeToggle on"></div> -->
+                </button>
+                <a href="#">
+                    <div class="setting"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="mainTop">
+            <!-- 데이터 노출 활성화. loginCon / logoutCon display 설정으로 노출/비노출 설정 -->
+            <div class="loginCon">
+                <div class="topText">
+                    <span class="subTit">오늘 걸음수</span>
+                    <div class="tit">8,778 걸음</div>
+                </div>
+                <div class="progress">
+                    <div class="bar" style="width:57%;">
+                        <!-- modeToggle 클릭시 .badge에 .on 토글 -->
+                        <!-- <div class="badge"></div> -->
+                        <div class="badge on"></div>
+                    </div>
+                </div>
+                <div class="mesg">
+                    거의 다 왔어요!<br>
+                    목표까지 1,222걸음 남았어요!
+                </div>
+            </div>
+
+            <!-- 데이터 노출 비활성화. loginCon / logoutCon display 설정으로 노출/비노출 설정 -->
+            <div class="logoutCon" style="display: none;">
+                <div class="emoj">📝</div>
+                <div class="guideTxt">
+                    다시 측정을 시작하고<br>
+                    당신의 습관을 기록하세요!
+                </div>
+            </div>
+
+            <div class="couponWrap">
+                <div>
+                    <div class="coupon">
+                        <div class="label">COUPON</div>
+                        <div class="value">2개</div>
+                    </div>
+                </div>
+                <div class="point">
+                    <div class="label">이번달 모인 포인트</div>
+                    <div class="icon"></div>
+                    <div class="value">1,080</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mainBottom">
+            <h3>🎲 오늘 미션! 100% 당첨 룰렛 쿠폰을 드려요.</h3>
+            <div class="missionCoupon">
+                <div class="missionIcon walk"></div>
+                <div class="label">1,000걸음 걷기 </div>
+                <a href="#">
+                    <div class="btn disabled">쿠폰 받음</div>
+                </a>
+            </div>
+            <div class="missionCoupon">
+                <div class="missionIcon walk"></div>
+                <div class="label">5,000걸음 걷기</div>
+                <a href="#">
+                    <div class="btn">쿠폰 받기</div>
+                </a>
+            </div>
+            <div class="missionCoupon">
+                <div class="missionIcon walk"></div>
+                <div class="label">10,000걸음 걷기</div>
+                <a href="#">
+                    <div class="btn">쿠폰</div>
+                </a>
+            </div>
+            <div class="missionCoupon">
+                <div class="missionIcon share"></div>
+                <div class="label">
+                    <div class="label">친구에게 자랑하기</div>
+                    <span class="sub">1P 지급 (최대 10명)</span>
+                </div>
+                <a href="#">
+                    <div class="btn black">공유하기</div>
+                </a>
+            </div>
+
+
+            <h3 style="margin-top:50px;">즉시 PASS머니 포인트를 드려요. </h3>
+
+            <a href="#">
+                <div class="moneyPoint">
+                    <div class="badge">PASS헬스케어 </div>
+                    <div class="tit">
+                        건강검진 정보부터 식단 관리까지<br>
+                        나를 위한 건강 습관!
+                    </div>
+                    <div class="subTit">
+                        헬스케어에서 데이터로 관리하세요
+                    </div>
+                    <div class="point">100P</div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="moneyPoint">
+                    <div class="badge">PASS헬스케어 </div>
+                    <div class="tit">
+                        건강검진 정보부터 식단 관리까지<br>
+                        나를 위한 건강 습관!
+                    </div>
+                    <div class="subTit">
+                        헬스케어에서 데이터로 관리하세요
+                    </div>
+                    <div class="point">100P</div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="moneyPoint">
+                    <div class="badge">PASS헬스케어 </div>
+                    <div class="tit">
+                        건강검진 정보부터 식단 관리까지<br>
+                        나를 위한 건강 습관!
+                    </div>
+                    <div class="subTit">
+                        헬스케어에서 데이터로 관리하세요
+                    </div>
+                    <div class="point">100P</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <a href="#">
+        <div class="aroundMap"></div>
+    </a>
+
+
+    <!-- modeToggle -->
+    <script>
+        const modeToggle = document.querySelector('.topNav .modeToggle')
+        const progressBadge = document.querySelector('.mainTop .progress .badge')
+        modeToggle.addEventListener('click', ()=>{
+            modeToggle.classList.toggle('on')
+            progressBadge.classList.toggle('on')
+        })
+    </script>
+    
+</body>
+</html>
