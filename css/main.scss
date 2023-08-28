@@ -56,17 +56,20 @@ $topNavHeight : 60px;
 
 
 .serviceWrap {
-  width: 100vw;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  background-color: #E9EBED;
-  &:has(.topNav) {
-    padding-top: $topNavHeight;
-  }
+    width: 100vw;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #E9EBED;
+    &:has(.topNav) {
+        padding-top: $topNavHeight;
+    }
+    &.whiteBg {
+        background-color: #fff;
+    }
 }
 
 
@@ -127,6 +130,14 @@ $topNavHeight : 60px;
                 color: #258AFF;
             }
         }
+    }
+    .close {
+        width: 24px;
+        height: 24px;
+        background: url(../img/nav_top_close.svg) center/cover no-repeat;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
     }
 }
 
@@ -386,4 +397,146 @@ $topNavHeight : 60px;
     position: fixed;
     right: 20px;
     bottom: 40px;
+}
+
+
+
+
+.loginWrap {
+    padding: 20px 16px;
+    .tit {
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+    .subTit {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+    .price {
+        font-size: 14px;
+        color: var(--newBlue);
+        margin-bottom: 20px;
+    }
+    .checkList {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 12px;
+        margin-left: -16px;
+        margin-right: -16px;
+        border-bottom: 1px solid #E7E7E7;
+        li {
+            position: relative;
+            .arr {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 36px;
+                height: 36px;
+                background: url(../img/ic_linkArr.svg) center no-repeat;
+            }
+        }
+    }
+
+    .all {
+        padding: 20px 12;
+        margin-left: -16px;
+        margin-right: -16px;
+        border: 1px solid #E7E7E7;
+        border-left: 0;
+        border-right: 0;
+        .label {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .desc {
+            padding-left: 32px;
+            color: #777;
+            margin-top: 16px;
+        }
+    }
+}
+
+.frame_inputCheck {
+    input {
+        display: none;
+    }
+    .inputStyle {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .checkboxImg {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        // background: url(../img/checkbox_off.svg) center/cover no-repeat;
+        background-color: #E6E6E6;
+        margin-right: 8px;
+        border-radius: 4px;
+        border: 1px solid #DCDCDC;
+        box-sizing: border-box;
+    }
+    .req {
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background-color: var(--newBlue);
+        margin-top: -16px;
+        margin-left: 2px;
+        display: none;
+    }
+
+    input:checked + .inputStyle .checkboxImg {
+        // background-image: url(../img/checkbox_on.svg);
+        background: var(--newBlue) url(../img/checkbox_on.svg) center/cover no-repeat;
+        border: 0;
+    }
+    input:required + .inputStyle {
+        .req {
+            display: block;
+        }
+    }
+}
+
+
+.mainBtn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 10px;
+    width: 98%;
+    max-width: 560;
+    color: #fff;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    height: 58px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .arr {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url(../img/arr_24_w.svg) center;
+    }
+}
+
+.appIcon {
+    position: fixed;
+    right: 25px;
+    bottom: 48px;
+    width: 58px;
+    height: 58px;
+    background: url(../img/appIcon.svg) center;
 }

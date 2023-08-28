@@ -1,0 +1,115 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만보기</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap whiteBg">
+
+        <div class="topNav">
+            <button class="close"></button>
+            <div class="tit">서비스 약관동의</div>
+            <div></div>
+        </div>
+
+        <div class="loginWrap">
+            <h1 class="tit">
+                헬스케어 만보기
+            </h1>
+            <div class="subTit">일상속 건강한 습관</div>
+            <div class="price">이용요금 : 무료</div>
+
+            <div class="all">
+                <label class="frame_inputCheck">
+                    <input type="checkbox" name="checklist" onclick="selectAll(this)">
+                    <div class="inputStyle">
+                        <span class="checkboxImg"></span>
+                        <span class="label">약관에 전체동의 (선택사항 포함)</span>
+                        <span class="req"></span>
+                    </div>
+                </label>
+                <div class="desc">
+                    전체동의는 선택목적에 대한 동의를 포함하고 있으며,<br>
+                    선택목적에 대한 동의를 거부해도 서비스 이용이 가능합니다.
+                </div>
+            </div>
+
+            <ul class="checkList">
+                <li>
+                    <label class="frame_inputCheck">
+                        <input type="checkbox" required="" name="checklist">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <span class="label">서비스 이용약관(무료)</span>
+                            <span class="req"></span>
+                        </div>
+                    </label>
+                    <a href="#" class="arr"></a>
+                </li>
+                <li>
+                    <label class="frame_inputCheck">
+                        <input type="checkbox" required="" name="checklist">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <span class="label">개인정보수집 및 이용동의</span>
+                            <span class="req"></span>
+                        </div>
+                    </label>
+                    <a href="#" class="arr"></a>
+                </li>
+                <li>
+                    <label class="frame_inputCheck">
+                        <input type="checkbox" required="" name="checklist">
+                        <div class="inputStyle">
+                            <span class="checkboxImg"></span>
+                            <span class="label">개인정보 제3자 제공 동의</span>
+                            <span class="req"></span>
+                        </div>
+                    </label>
+                    <a href="#" class="arr"></a>
+                </li>
+                <li>
+                    <!-- component : frame_inputCheck -->
+                    <label class="frame_inputCheck">
+                    <!-- input required 여부에 따라 파란 점으로 구분됩니다. -->
+                    <input type="checkbox" name="checklist">
+                    <div class="inputStyle">
+                        <span class="checkboxImg"></span>
+                        <span class="label">알림 및 광고 수신동의</span>
+                        <span class="req"></span>
+                    </div>
+                </label>
+                    <a href="#" class="arr"></a>
+                </li>
+            </ul>
+            <script>
+                // 체크 박스 ALL 선택
+                function selectAll(selectAll)  {
+                    const checkboxes 
+                        = document.getElementsByName('checklist');
+                    
+                    checkboxes.forEach((checkbox) => {
+                        checkbox.checked = selectAll.checked;
+                    })
+                }
+            </script>
+            
+        </div>
+
+        <a href="#">
+            <div class="mainBtn">
+                무료가입
+                <div class="arr"></div>
+            </div>
+        </a>
+    </div>
+
+
+</body></html>
