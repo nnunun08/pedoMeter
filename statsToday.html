@@ -1,0 +1,157 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만보기</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap whiteBg">
+
+        <div class="topNav">
+            <button class="viewToggle"></button>
+            <div class="tit">만보기 통계</div>
+            <button class="close right"></button>
+        </div>
+        <!-- viewToggle -->
+        <script>
+            const viewToggle = document.querySelector('.topNav .viewToggle')
+            viewToggle.addEventListener('click', ()=>{
+                viewToggle.classList.toggle('on')
+            })
+        </script>
+
+        <div class="tab">
+            <div class="tabItem ac">오늘</div>
+            <div class="tabItem">최근7일</div>
+            <div class="tabItem">최근30일</div>
+        </div>
+
+        <div class="tabCon">
+            <div class="visual">
+                <div class="averageValue">
+                    <div class="label">평균</div>
+                    <div class="value">12,345</div>
+                </div>
+                <div class="graph">
+                    <div class="item">
+                        <div class="bar" style="">
+                            <div class="value">-</div>
+                            <div class="key">12시</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="bar" style="">
+                            <div class="value">-</div>
+                            <div class="key">1시</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="bar" style="">
+                            <div class="value">-</div>
+                            <div class="key">2시</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="bar" style="height:50%">
+                            <div class="value">403</div>
+                            <div class="key">3시</div>
+                        </div>
+                    </div>
+                    <div class="item point">
+                        <!-- 걸음수 값에 따라 bar에 height 0 ~ 100% -->
+                        <div class="bar" style="height:70%">
+                            <div class="value">600</div>
+                            <div class="key">4시</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analyze">
+                <div class="item">
+                    <div class="tit up">
+                        <h3>
+                            어제보다 <br>
+                            7500걸음 늘었어요.
+                        </h3>
+                        <div class="arrow"></div>
+                    </div>
+
+                    <div class="tray">
+                        <div class="left">
+                            <div>
+                                <div class="key">어제 </div>
+                                <div class="value">4,856</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="right">
+                            <div>
+                                <div class="key">어제 </div>
+                                <div class="value">4,856</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="tit up">
+                        <h3>
+                            이번 주 평균 걸음수가 <br>
+                            지난 주보다 812걸음 늘었어요.
+                        </h3>
+                        <div class="arrow"></div>
+                    </div>
+
+                    <div class="tray">
+                        <div class="left">
+                            <div>
+                                <div class="key">어제 </div>
+                                <div class="value">4,856</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="right">
+                            <div>
+                                <div class="key">어제 </div>
+                                <div class="value">4,856</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="tit down">
+                        <h3>
+                            이번 달 평균 걸음수가 <br>
+                            지난 달보다 1002걸음 줄었어요. 
+                        </h3>
+                        <div class="arrow"></div>
+                    </div>
+
+                    <div class="tray">
+                        <div class="left">
+                            <div>
+                                <div class="key">어제 </div>
+                                <div class="value">4,856</div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="right">
+                            <div>
+                                <div class="key">어제 </div>
+                                <div class="value">4,856</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
