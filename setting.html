@@ -1,0 +1,151 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만보기</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap whiteBg">
+
+        <div class="topNav">
+            <div class="tit">설정</div>
+            <button class="close right"></button>
+        </div>
+
+        <div class="sectionBx" style="padding-top: 0;">
+            <div class="funcToggle">
+                <div>
+                    <div class="key">걸음수 측정</div>
+                </div>
+                <!-- .toggleRadio 에 ac 클래스 토글 (on/off) -->
+                <div class="toggleRadio"></div>
+            </div>
+            <div class="dailyWalk">
+                <div class="tit">일일 목표 걸음수 설정</div>
+                <input class="settingInput" type="text" placeholder="목표 걸음수를 입력하세요">
+            </div>
+        </div>
+
+        <div class="sectionBx">
+            <div class="sectionTit">
+                🛎️ PUSH 설정
+            </div>
+            <div class="funcToggle">
+                <div>
+                    <div class="key">미션 달성 상태 알림</div>
+                </div>
+                <div class="toggleRadio"></div>
+            </div>
+            <div class="funcToggle">
+                <div>
+                    <div class="key">새운 광고 알림</div>
+                </div>
+                <div class="toggleRadio"></div>
+            </div>
+        </div>
+
+        <div class="sectionBx">
+            <div class="sectionTit">
+                <i></i>
+                댕댕이 산책 설정 
+            </div>
+            <div class="infoDesc">
+                반려견이 있다면 이 설정을 사용하세요. <br>
+                함께 산책할 때 “산책하기”를 시작/중지할 수 있고, 나의 댕댕이와 얼만큼 걸었는지 알아보세요! 
+            </div>
+            <div class="funcToggle">
+                <div>
+                    <div class="key">댕댕이 설정 사용  </div>
+                </div>
+                <div class="toggleRadio"></div>
+            </div>
+            <div class="funcToggle">
+                <div>
+                    <div class="key">산책 위치 공개</div>
+                    <div class="desc">비공개로 설정 시 주변 산책 정보에 표시되지 않습니다.</div>
+                </div>
+                <div class="toggleRadio"></div>
+            </div>
+        </div>
+
+        <div class="sectionBx">
+            <div class="sectionTit">
+                🐶 나의 댕댕이 정보 등록 
+            </div>
+            <div class="inputWrap">
+                <input class="settingInput" type="text" placeholder="이름"> 
+                <input class="settingInput" type="text" placeholder="나이"> 
+                <input class="settingInput" type="text" placeholder="성별"> 
+                <input class="settingInput" type="text" placeholder="견종"> 
+            </div>
+        </div>
+
+        <div class="sectionBx">
+            <div class="sectionTit">
+                🙋🏻‍♀️ 상태 메시지 (주변 산책 정보에 표시.  10자 이내)
+            </div>
+            <div class="inputWrap">
+                <input class="settingInput" type="text" placeholder="친구야 놀자~"> 
+            </div>
+        </div>
+
+        <div class="sectionBx">
+            <div class="sectionTit">
+                💬 댕댕이 SNS 
+            </div>
+            <div class="inputWrap">
+                <input class="settingInput" type="text" placeholder="인스타그램"> 
+                <input class="settingInput" type="text" placeholder="유튜브"> 
+            </div>
+        </div>
+
+        <div class="sectionBx">
+            <div class="sectionTit">
+                아이콘 설정
+                <button class="setIcon">수정</button>
+            </div>
+
+            <div class="insertIcon">
+                <div class="item">
+                    <div class="iconTray">
+                        <img src="./img/img_setIconDf_walk.png" alt="">
+                    </div>
+                    <div>산책중</div>
+                </div>
+                <div class="item">
+                    <div class="iconTray">
+                        <img src="./img/img_setIconDf_rest.png" alt="">
+                    </div>
+                    <div>쉬는중</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainBtn">
+            <a href="#">
+                저장
+            </a>
+        </div>
+
+        
+
+        <script>
+            const funcToggle = document.querySelectorAll('.toggleRadio')
+            funcToggle.forEach(element => {
+                element.addEventListener('click', (e)=>{
+                    e.target.classList.toggle('ac')
+                })
+            });
+
+        </script>
+
+    </div>
+
+</body>
+</html>

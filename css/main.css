@@ -900,4 +900,152 @@ button {
   font-size: 24px;
   font-weight: 600;
   color: #000;
+}
+
+.funcToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 7px;
+  min-height: 58px;
+  box-sizing: border-box;
+}
+.funcToggle .key {
+  font-size: 18px;
+  font-weight: bold;
+}
+.funcToggle .desc {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--newGrey3);
+}
+.funcToggle .toggleRadio {
+  width: 45px;
+  height: 28px;
+  border-radius: 40px;
+  background-color: #E9E9EA;
+  position: relative;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.8px;
+  box-sizing: border-box;
+}
+.funcToggle .toggleRadio::before {
+  content: "";
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.12);
+}
+.funcToggle .toggleRadio.ac {
+  background-color: var(--newBlue);
+  justify-content: flex-end;
+}
+
+.dailyWalk {
+  padding: 0 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.dailyWalk .tit {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--newGrey3);
+  margin-bottom: 11px;
+}
+
+.settingInput {
+  width: 100%;
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  border: 0;
+  outline: 0;
+}
+.settingInput::-moz-placeholder {
+  color: #DCE0E3;
+}
+.settingInput::placeholder {
+  color: #DCE0E3;
+}
+
+.sectionBx {
+  border: 1px solid var(--newGrey);
+  border-left: 0;
+  border-right: 0;
+  padding: 30px 0;
+  box-sizing: border-box;
+  margin-top: -1px;
+}
+.sectionBx .sectionTit {
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--newGrey3);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 9px;
+}
+.sectionBx .sectionTit i {
+  width: 18px;
+  height: 18px;
+  background: url(../img/ic_info.svg) center;
+}
+.sectionBx .infoDesc {
+  color: var(--newBlue);
+  padding: 0 15px;
+  margin-bottom: 25px;
+}
+.sectionBx .inputWrap {
+  padding: 0 15px;
+}
+.sectionBx .inputWrap .settingInput {
+  margin-top: 30px;
+}
+.sectionBx .sectionTit:has(.setIcon) {
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionBx .setIcon {
+  font-size: 13px;
+  color: var(--newBlue);
+  padding: 6px 16px;
+  border-radius: 4px;
+  background-color: var(--newGrey);
+}
+.sectionBx .insertIcon {
+  display: flex;
+  margin-top: 47px;
+  justify-content: space-around;
+  justify-content: center;
+}
+.sectionBx .insertIcon .item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--newGrey3);
+}
+.sectionBx .insertIcon .item .iconTray {
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: var(--newGrey);
+  position: relative;
+}
+.sectionBx .insertIcon .item .iconTray img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
