@@ -1,0 +1,88 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만보기</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+</head>
+<body>
+    <div class="serviceWrap" style="overflow: hidden;">
+        <!-- 화면 컨텐츠 -->
+    </div>
+    <!-- modal 활성화시 display block 으로 노출 설정 : default display none 으로 설정되어 있습니다.(CSS) -->
+    <!-- modal 활성화시 .serviceWrap 에 overflow hidden 넣어주세요. (화면 움직임 방지) -->
+    <div class="modal" style="display: block;">
+        <div class="popup">
+            <div class="tray">
+                <button class="closePop"></button>
+
+                <h1>
+                    아이콘 설정
+                </h1>
+
+                <div class="iconPanel">
+                    <div class="tit">
+                        산책중
+                    </div>
+                    <div class="setIconList">
+                        <input type="file" class="addFile">
+                        <div class="coverItem dfWalk selected"></div>
+                        <!-- 사용자가 추가한 이미지 -->
+                        <div class="coverItem">
+                            <img src="./img/sample/img_iconSample.jpg" alt="">
+                        </div>
+                        <!-- 사용자가 추가한 이미지 -->
+                        <div class="coverItem">
+                            <img src="./img/sample/img_iconSample.jpg" alt="">
+                        </div>
+                        <!-- 사용자가 추가한 이미지 -->
+                        <div class="coverItem">
+                            <img src="./img/sample/img_iconSample.jpg" alt="">
+                        </div>
+                        <!-- 사용자가 추가한 이미지 -->
+                        <div class="coverItem">
+                            <img src="./img/sample/img_iconSample.jpg" alt="">
+                        </div>
+                        <!-- 사용자가 추가한 이미지 -->
+                        <div class="coverItem">
+                            <img src="./img/sample/img_iconSample.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="tit">
+                        쉬는중
+                    </div>
+                    <div class="setIconList">
+                        <input type="file" class="addFile">
+                        <div class="coverItem dfRest selected"></div>
+                    </div>
+                </div>
+
+                <script>
+                    const coverItem = document.querySelectorAll('.coverItem')
+                    console.log(coverItem)
+                    coverItem.forEach(element => {
+                        element.addEventListener('click', (e)=>{
+                            for(let i = 0; i < coverItem.length; i++) {
+                                coverItem[i].classList.remove('selected')
+                            }
+                            e.currentTarget.classList.add('selected')
+                        })
+                    });
+        
+                </script>
+                
+                <button class="popBtn">
+                    선택 완료 
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
