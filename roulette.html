@@ -29,6 +29,65 @@
                 <span>2개</span>
             </div>
 
+            <div class="rouletteWrap">
+
+                <div class="rouletteArr object">
+                    <img src="./img/ic_rouletteArr.png" alt="">
+                </div>
+
+                <div class="rouletteTrigger object">
+                    <div class="tit">START</div>
+                    <div class="desc">룰렛돌리기</div>
+                </div>
+
+                <div class="rouletteCircle" id="rouletteCircle">
+                    <div class="eventItem">
+                        <div class="tit">1개월 무료</div>
+                        <div class="desc">헬스케어 이용권</div>
+                    </div>
+                    <div class="eventItem">
+                        <div class="tit">1,000p</div>
+                        <div class="desc">포인트</div>
+                    </div>
+                    <div class="eventItem">
+                        <div class="tit">3개</div>
+                        <div class="desc">룰렛쿠폰</div>
+                    </div>
+                    <div class="eventItem">
+                        <div class="tit">1,000p</div>
+                        <div class="desc">포인트</div>
+                    </div>
+                </div>
+
+                <div class="backImg01 object">
+                    <img src="./img/ic_rouletteItem01.png" alt="">
+                </div>
+                <div class="backImg02 object">
+                    <img src="./img/ic_rouletteItem02.svg" alt="">
+                </div>
+                <div class="backImg03 object">
+                    <img src="./img/ic_rouletteItem03.svg" alt="">
+                </div>
+            </div>
+
+            <script>
+                const trigger = document.querySelector('.rouletteTrigger')
+                const rouletteCircle = document.getElementById('rouletteCircle')
+                trigger.addEventListener('click', () => {
+                    let rotation =  Math.random() * (2000 - 3500) + 3000;
+                    rouletteCircle.style.removeProperty('transform')
+                    rouletteCircle.style.removeProperty('transition')
+                    setTimeout(() => {
+                        rouletteCircle.style.transform = `rotate(${rotation}deg)`
+                        rouletteCircle.style.transition = '4s cubic-bezier(0.02, 0.96, 1, 1)'
+                    }, 10)
+                    setTimeout(()=>{
+                        console.log('message')
+                    },4000)
+                })
+            </script>
+
+            <div class="rouletteGuide">START를 누르면 룰렛이 시작되요.</div>
 
         </div>
 
