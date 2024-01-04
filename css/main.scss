@@ -1318,17 +1318,21 @@ $mainBtnHeight : 94px;
                 padding-bottom: 16%;
                 box-sizing: border-box;
                 .tit {
-                    font-size: 24px;
+                    font-size: 16px;
                     font-weight: 900;
-                    color: var(--newBlue);
                 }
                 .desc {
                     font-size: 16px;
+                    font-weight: 900;
                 }
-                &:nth-child(1){transform: rotate(45deg) translateY(-50%);}
-                &:nth-child(2){transform: rotate(135deg) translateY(-50%);}
-                &:nth-child(3){transform: rotate(225deg) translateY(-50%);}
-                &:nth-child(4){transform: rotate(315deg) translateY(-50%);}
+                &:nth-child(1){transform: rotate(22.5deg) translateY(-50%);}
+                &:nth-child(2){transform: rotate(67.5deg) translateY(-50%);}
+                &:nth-child(3){transform: rotate(112.5deg) translateY(-50%);}
+                &:nth-child(4){transform: rotate(157.5deg) translateY(-50%);}
+                &:nth-child(5){transform: rotate(-157.5deg) translateY(-50%);}
+                &:nth-child(6){transform: rotate(-112.5deg) translateY(-50%);}
+                &:nth-child(7){transform: rotate(-67.5deg) translateY(-50%);}
+                &:nth-child(8){transform: rotate(-22.5deg) translateY(-50%);}
             }
         }
         .object {
@@ -1342,6 +1346,7 @@ $mainBtnHeight : 94px;
             aspect-ratio: 1/1;
             border-radius: 50%;
             background-color: #252626;
+            background: url(../img/ic_rouletteBtn.png) center/cover no-repeat;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             display: flex;
             flex-direction: column;
@@ -1351,15 +1356,30 @@ $mainBtnHeight : 94px;
             box-sizing: border-box;
             cursor: pointer;
             z-index: 1;
+            animation-name: rouletteBtn;
+            animation-duration: 0.5s;
+            animation-timing-function: cubic-bezier(1, 0.03, 0, 0.99);
+            animation-iteration-count: infinite;
+            @keyframes rouletteBtn {
+                0% {
+                    background: url(../img/ic_rouletteBtn.png) center/cover no-repeat;
+                }
+                50% {
+                    background: url(../img/ic_rouletteBtn2.png) center/cover no-repeat;
+                }
+            }
             .tit {
-                font-size: 24px;
+                font-size: 31px;
                 font-weight: 900;
-                color: #fff;
+                line-height: 1;
+                color: #252626;
+                margin-top: 8px;
             }
             .desc {
-                font-size: 16px;
-                font-weight: 600;
-                color: #FEEA82;
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 1;
+                color: #252626;
             }
         }
         .rouletteArr {

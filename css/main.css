@@ -1214,24 +1214,36 @@ button {
   box-sizing: border-box;
 }
 .roulette .rouletteWrap .rouletteCircle .eventItem .tit {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 900;
-  color: var(--newBlue);
 }
 .roulette .rouletteWrap .rouletteCircle .eventItem .desc {
   font-size: 16px;
+  font-weight: 900;
 }
 .roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(1) {
-  transform: rotate(45deg) translateY(-50%);
+  transform: rotate(22.5deg) translateY(-50%);
 }
 .roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(2) {
-  transform: rotate(135deg) translateY(-50%);
+  transform: rotate(67.5deg) translateY(-50%);
 }
 .roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(3) {
-  transform: rotate(225deg) translateY(-50%);
+  transform: rotate(112.5deg) translateY(-50%);
 }
 .roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(4) {
-  transform: rotate(315deg) translateY(-50%);
+  transform: rotate(157.5deg) translateY(-50%);
+}
+.roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(5) {
+  transform: rotate(-157.5deg) translateY(-50%);
+}
+.roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(6) {
+  transform: rotate(-112.5deg) translateY(-50%);
+}
+.roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(7) {
+  transform: rotate(-67.5deg) translateY(-50%);
+}
+.roulette .rouletteWrap .rouletteCircle .eventItem:nth-child(8) {
+  transform: rotate(-22.5deg) translateY(-50%);
 }
 .roulette .rouletteWrap .object {
   position: absolute;
@@ -1244,6 +1256,7 @@ button {
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: #252626;
+  background: url(../img/ic_rouletteBtn.png) center/cover no-repeat;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   display: flex;
   flex-direction: column;
@@ -1253,16 +1266,31 @@ button {
   box-sizing: border-box;
   cursor: pointer;
   z-index: 1;
+  animation-name: rouletteBtn;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(1, 0.03, 0, 0.99);
+  animation-iteration-count: infinite;
+}
+@keyframes rouletteBtn {
+  0% {
+    background: url(../img/ic_rouletteBtn.png) center/cover no-repeat;
+  }
+  50% {
+    background: url(../img/ic_rouletteBtn2.png) center/cover no-repeat;
+  }
 }
 .roulette .rouletteWrap .rouletteTrigger .tit {
-  font-size: 24px;
+  font-size: 31px;
   font-weight: 900;
-  color: #fff;
+  line-height: 1;
+  color: #252626;
+  margin-top: 8px;
 }
 .roulette .rouletteWrap .rouletteTrigger .desc {
-  font-size: 16px;
-  font-weight: 600;
-  color: #FEEA82;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  color: #252626;
 }
 .roulette .rouletteWrap .rouletteArr {
   top: -5%;
